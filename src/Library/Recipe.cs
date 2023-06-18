@@ -6,7 +6,7 @@
 
 using System;
 using System.Collections.Generic;
-
+// Se utiliza el patron de Singleton.
 namespace Full_GRASP_And_SOLID
 {
     public class Recipe : IRecipeContent // Modificado por DIP
