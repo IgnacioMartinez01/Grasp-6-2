@@ -13,8 +13,25 @@ namespace Full_GRASP_And_SOLID
     {
         // Cambiado por OCP
         private IList<BaseStep> steps = new List<BaseStep>();
-
+        private bool Cooking {get;set;}
+        public bool Cooked = false;
         public Product FinalProduct { get; set; }
+
+        public void Cook()
+        {
+            bool Cooked = true;
+            int GetCook= GetCookTime();
+        }
+
+        public int GetCookTime()
+        {
+            int totalTime = 0;
+            foreach(BaseStep step in steps)
+            {
+                totalTime=+ step.Time;
+            }
+            return totalTime;
+        }
 
         // Agregado por Creator
         public void AddStep(Product input, double quantity, Equipment equipment, int time)
